@@ -7,7 +7,6 @@
     {
       "matches": ["https://chatgpt.com/"],
       "css": ["styles.css"],
-      "js": ["test.js"],
       "run_at": "document_idle"
     }
   ]
