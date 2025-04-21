@@ -60,8 +60,8 @@ body::before {
     100% { opacity: 1; }
 }
 
-pre, code {
-  background: transparent !important; /* No background */
+pre {
+  background: transparent !important;
   border: none !important;
   color: #00ff00 !important;
   font-family: "Courier New", monospace !important;
@@ -73,19 +73,32 @@ pre, code {
   overflow-x: auto !important;
   display: block;
   line-height: 1.4;
-}
-
-/* No glow on inline code */
-code {
-  text-shadow: none !important;
-}
-
-/* No glow on block code */
-pre code {
-  text-shadow: none !important;
-}
-
-pre {
   position: relative;
   z-index: 0;
+}
+
+code {
+  background: none !important;
+  border: none !important;
+  color: inherit !important;
+  font-family: inherit !important;
+  animation: none !important;
+  filter: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  overflow: visible !important;
+  display: inline; /* <-- this fixes the paragraph issue */
+  text-shadow: none !important;
+}
+
+/* Inline code style */
+p code, li code, span code {
+  color: #00ff00 !important;
+  font-family: "Courier New", monospace !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 0px !important;
+  text-shadow: none !important;
+  font-size: 1em;
 }
